@@ -1,0 +1,15 @@
+{
+  "name": "performance-optimization-project",
+  "version": "1.0.0",
+  "description": "Optimise the performance of webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Suresh Rao",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  }
+}
