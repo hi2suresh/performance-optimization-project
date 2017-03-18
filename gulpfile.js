@@ -1,12 +1,14 @@
 'use strict';
 
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
-    uglifycss = require('gulp-uglifycss');
+    uglifycss = require('gulp-uglifycss'),
+    image =require('gulp-image'),
+    clean = require('gulp-clean');
 
-gulp.task('concatCSS', function() {
+gulp.task('concatCSS',function() {
     return gulp.src(['css/normalize.css','css/foundation.css','css/arvo.css', 'css/ubuntu.css',
               'css/basics.css','css/menu.css','css/hero.css','css/photo-grid.css',
               'css/modals.css','css/footer.css'])
@@ -23,7 +25,7 @@ gulp.task('minifyCSS', ['concatCSS'], function(){
 });
 
 
-gulp.task('concatScripts', function() {
+gulp.task('concatScripts', ['cleanScripts'],function() {
     return gulp.src(['js/jquery.js','js/fastclick.js','js/foundation.js','js/foundation.equalizer.js',
               'js/foundation.reveal.js'])
         .pipe(concat('app.js'))
@@ -35,6 +37,23 @@ gulp.task('minifyScripts', ['concatScripts'], function(){
         .pipe(uglify())
         .pipe(rename('app.min.js'))
         .pipe(gulp.dest('js'));
+});
+
+gulp.task('compressImages',['cleanImages'], function(){
+    gulp.src('img/photos/*')
+        .pipe(image())
+        .pipe(rename({prefix: 'compressed'}))
+        .pipe(gulp.dest('img/photos/'));
+});
+
+gulp.task('cleanScripts', function () {
+  return gulp.src(['js/app.js','js/app.min.js'], {read: false})
+    .pipe(clean());
+});
+
+gulp.task('cleanImages', function () {
+  return gulp.src(['img/photos/comp*'], {read: false})
+    .pipe(clean());
 });
 
 gulp.task('default',['minifyCSS','minifyScripts'], function() {
