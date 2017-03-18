@@ -9,7 +9,7 @@ const gulp = require('gulp'),
     clean = require('gulp-clean');
 
 gulp.task('concatCSS',function() {
-    return gulp.src(['css/normalize.css','css/foundation.css','css/arvo.css', 'css/ubuntu.css',
+    return gulp.src(['css/normalize.css','css/foundation.css',
               'css/basics.css','css/menu.css','css/hero.css','css/photo-grid.css',
               'css/modals.css','css/footer.css'])
         .pipe(concat('app.css'))
@@ -39,11 +39,26 @@ gulp.task('minifyScripts', ['concatScripts'], function(){
         .pipe(gulp.dest('js'));
 });
 
-gulp.task('compressImages',['cleanImages'], function(){
+gulp.task('compressPhotos', function(){
     gulp.src('img/photos/*')
         .pipe(image())
-        .pipe(rename({prefix: 'compressed'}))
         .pipe(gulp.dest('img/photos/'));
+});
+
+gulp.task('compressAvatars', function(){
+    gulp.src('img/avatars/*')
+        .pipe(image())
+        .pipe(gulp.dest('img/avatars/'));
+});
+
+gulp.task('compressLogo', function(){
+    gulp.src('img/logo.png')
+        .pipe(image())
+        .pipe(gulp.dest('img/'));
+});
+
+gulp.task('compressImages',['compressPhotos','compressAvatars','compressLogo'], function(){
+  console.log("Compressing Images");
 });
 
 gulp.task('cleanScripts', function () {

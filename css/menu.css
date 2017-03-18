@@ -74,7 +74,7 @@
 }
 .menu .logo b {
     color: rgb(47, 171, 206);
-    font-family: "Ubuntu";
+    font-family: 'Ubuntu', sans-serif;
 }
 @media only screen and (min-width: 40.063em) {
     .logo {

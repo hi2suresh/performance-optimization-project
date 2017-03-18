@@ -7005,70 +7005,6 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-/* Arvo */
-@font-face {
-    font-family: "Arvo";
-    src: url("Arvo/Arvo-Regular.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Arvo";
-    font-weight: bold;
-    src: url("Arvo/Arvo-Bold.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Arvo";
-    font-weight: bold;
-    font-style: italic;
-    src: url("Arvo/Arvo-BoldItalic.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Arvo";
-    font-style: italic;
-    src: url("Arvo/Arvo-Italic.ttf") format('truetype');
-}
-/* Ubuntu */
-@font-face {
-    font-family: "Ubuntu";
-    src: url("Ubuntu/Ubuntu-Regular.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Ubuntu";
-    font-style: italic;
-    src: url("Ubuntu/Ubuntu-Italic.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Ubuntu";
-    font-weight: 300;
-    src: url("Ubuntu/Ubuntu-Light.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Ubuntu";
-    font-style: italic;
-    font-weight: 300;
-    src: url("Ubuntu/Ubuntu-LightItalic.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Ubuntu";
-    font-weight: 700;
-    src: url("Ubuntu/Ubuntu-Bold.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Ubuntu";
-    font-style: italic;
-    font-weight: 700;
-    src: url("Ubuntu/Ubuntu-BoldItalic.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Ubuntu";
-    font-weight: 500;
-    src: url("Ubuntu/Ubuntu-Medium.ttf") format('truetype');
-}
-@font-face {
-    font-family: "Ubuntu";
-    font-style: italic;
-    font-weight: 500;
-    src: url("Ubuntu/Ubuntu-MediumItalic.ttf") format('truetype');
-}
 body {
     background-color: rgb(235, 236, 237);
 }
@@ -7148,7 +7084,7 @@ body {
 }
 .menu .logo b {
     color: rgb(47, 171, 206);
-    font-family: "Ubuntu";
+    font-family: 'Ubuntu', sans-serif;
 }
 @media only screen and (min-width: 40.063em) {
     .logo {
@@ -7168,8 +7104,7 @@ body {
 }
 .hero .info .attribution {
     color: rgb(235, 236, 237);
-    font-family: "Ubuntu";
-    font-size: 0.95rem;
+    font-family: 'Ubuntu', sans-serif;    font-size: 0.95rem;
     float: left;
     text-align: right;
 }
@@ -7190,7 +7125,7 @@ body {
 }
 .image-grid h2 {
     color: rgb(73, 85, 96);
-    font-family: "Arvo";
+    font-family: 'Arvo', serif;
     font-size: 1.5rem;
     font-style: italic;
     font-weight: normal;
@@ -7220,7 +7155,7 @@ body {
 }
 .image-grid .image .info .attribution {
     color: rgb(73, 85, 96);
-    font-family: "Ubuntu";
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.95rem;
 }
 .image-grid .image .info .attribution b {
@@ -7239,7 +7174,7 @@ body {
 }
 .reveal-modal .info .attribution {
     color: rgb(73, 85, 96);
-    font-family: "Ubuntu";
+    font-family: 'Ubuntu', sans-serif;
     line-height: 75px;
 }
 .reveal-modal .info .attribution b {
@@ -7273,7 +7208,7 @@ footer .social svg {
 }
 footer p {
     color: rgb(125, 136, 146);
-    font-family: "Ubuntu";
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.95rem;
     font-weight: 300;
     padding-top: 0.5rem;
