@@ -11,7 +11,7 @@ const gulp = require('gulp'),
 gulp.task('concatCSS',function() {
     return gulp.src(['css/normalize.css','css/foundation.css',
               'css/basics.css','css/menu.css','css/hero.css','css/photo-grid.css',
-              'css/modals.css','css/footer.css'])
+              'css/modals.css','css/footer.css','css/spriteAvatars.css'])
         .pipe(concat('app.css'))
         .pipe(gulp.dest('css'));
     
