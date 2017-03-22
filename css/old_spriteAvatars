@@ -1,0 +1,12 @@
+.logo, .avatar5, .avatar6, .avatar7, .avatar1, 
+.avatar2, .avatar3, .avatar4
+{ max-width: 100%; background-size: 100%; background-image: url('png.png'); }
+ 
+.logo { background-position: 0 0%; background-size: 100%; }
+.avatar5 { background-position: 0 37.588652%; background-size: 2730.666667%; }
+.avatar6 { background-position: 0 51.77305%; background-size: 2730.666667%; }
+.avatar7 { background-position: 0 65.957447%; background-size: 2730.666667%; }
+.avatar1 { background-position: 0 75.838926%; background-size: 4551.111111%; }
+.avatar2 { background-position: 0 83.892617%; background-size: 4551.111111%; }
+.avatar3 { background-position: 0 91.946309%; background-size: 4551.111111%; }
+.avatar4 { background-position: 0 100%; background-size: 4551.111111%; }
